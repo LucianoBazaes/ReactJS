@@ -9,7 +9,6 @@ import './item.css'
 
 const Item = ( {contenido} ) => {
   return (
-    <Link to = {`/detalle/${contenido.id}`}>
      <Card className='cardItem' style={{ width: '18rem' }}>
     <Card.Img variant="top" src={contenido.image} />
      <Card.Body>
@@ -17,10 +16,11 @@ const Item = ( {contenido} ) => {
         <Card.Text>
          {contenido.precio}
        </Card.Text>
+       <Link to = {`/detalle/${contenido.id}`}>
        <Button variant="primary">Ver en detalle</Button>
+       </Link>
      </Card.Body>
    </Card>
-   </Link>
  )
 }
 
