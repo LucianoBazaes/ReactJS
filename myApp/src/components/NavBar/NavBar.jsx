@@ -1,34 +1,34 @@
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import { Link, NavLink } from 'react-router-dom';
+
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import ShoppingCar from '../ShoppingCar/ShoppingCar'
+
 import './navBar.css'
 
 const NavBar = () => {
   return (
-    <nav>
-      <h1>NBA Store</h1>
-        <ul>      
-            <li>
-               <a href="#">Musculosas</a>
-            </li>
+     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container>
+ 
+        <Link to='/' className='seccion'>NBA STORE</Link>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
 
-            <li>
-               <a href="#">Buzos</a>
-            </li>
+            <NavLink to='/categoria/musculosas' className='seccion'>Musculosas</NavLink>
+            <NavLink to='/categoria/remeras' className='seccion'>Remeras</NavLink>
+            <NavLink to='/categoria/gorras' className='seccion'>Gorras</NavLink>
+            <NavLink to='/categoria/buzos' className='seccion'>Buzos</NavLink>
+            <NavLink to='/ShoppingCart'className='seccion'><ShoppingCar /></NavLink>
+
            
-            <li>
-            <a href="#">Accesorios</a>
-            </li>
-
-            <li>
-            <a href="#">Calzado</a>
-            </li>
-
-            <li>
-              <a href="#"> <ShoppingCar /></a>
-            </li>
-
-        </ul>
-
-    </nav>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 }
 

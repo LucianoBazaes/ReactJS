@@ -13,4 +13,9 @@ nav ul li a {
     margin: 20px;
     color: black;
 }
-    
+
+.seccion {
+    margin: 1rem;
+    text-decoration: none;
+    color: aliceblue;
+}

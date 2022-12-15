@@ -1,27 +1,38 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+
+
+
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import ItemContainer from './components/ItemContainer/ItemContainer'
+
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import NavBar from './components/NavBar/NavBar'
 import ShoppingCar from './components/ShoppingCar/ShoppingCar'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 // import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
-  let saludo = 'Hola mundo, saludos!'
-
-
   return (
-    <div>
-      <NavBar>
+    <BrowserRouter>
+    
+      <NavBar />
 
-        <ShoppingCar  />
+      <Routes>
 
-      </NavBar>
-
-      <ItemContainer saludo ={saludo}/>
+        <Route path='/' element={ <ItemListContainer/> } />
+        <Route path='/categoria/:categoriaId' element={<ItemListContainer/>} />
+        <Route path='/ShoppingCart' element={<ShoppingCar />} />
+        <Route path='/detalle/:detalleId' element={<ItemDetailContainer/>} />
+       
+        <Route path='*' element={<Navigate to='/' />} />
+      </Routes>
       
-    </div>
+    </BrowserRouter>
   )
 }
 
