@@ -3,7 +3,6 @@ import {useParams} from 'react-router-dom';
 
 
 import ItemList from '../ItemList/ItemList';
-import Item from '../Item/Item';
 import ItemCount from '../ItemCount/ItemCount';
 
 
@@ -33,27 +32,21 @@ import './itemListContainer.css'
           resolve(productos);
       }, 1000)   
     });
+    
      if(categoriaId) {
       getInfo.then(res => setInfoCard(res.filter(producto => producto.categoria === categoriaId)));
   } else {
-      getInfo.then(res => setInfoCard(res));
+      getInfo.then(res => setInfoCard(res)); //VER
   }
 
  },[categoriaId]);  
   
 
-  const onAdd = (valor) => {
-  console.log(`Compraste ${valor} unidades`);
-}
-
-
-
     return (
-      <>       
+      <div>       
           <ItemList infoCard={infoCard} />
-          <ItemCount initial={1} stock={10} onAdd={onAdd} />
-    
-      </>
+            
+      </div>
     )
   }
 export default itemListContainer
