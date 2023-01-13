@@ -14,17 +14,18 @@ const ItemDetail = ({data}) => {
   }
 
  return (
-    <div>
-        {<Card className='cardDetail' style={{ width: '18rem' }}>
+    <div className='cardDetail'>
+        {<Card border="light" style={{ width: '30rem' }}>
         <Card.Img variant="top" src={data.image} />
         <Card.Body>
-          <Card.Title>{data.nombre}</Card.Title>
+          <Card.Title> <h1>{data.nombre}</h1> </Card.Title>
           <Card.Text>
-            {data.description}
+            <h2>${data.precio}</h2>                    
+            <h2>{data.description}</h2> 
           </Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroup.Item> <ItemCount initial={1} stock={10} onAdd={onAdd} /></ListGroup.Item>
+          <ListGroup.Item> <ItemCount initial={1} stock={9} onAdd={onAdd} /></ListGroup.Item>
         </ListGroup>        
       </Card> }
 

@@ -1,3 +1,18 @@
-.cardItem {
-    margin: 2rem;
+.cardGral {
+    display: inline-block;
 }
+
+.cardItem {
+    background-color: rgba(236, 24, 24, 0.733);
+    margin: 2rem;
+    display: flex;
+}
+
+.cardText {
+    font-size: x-large;
+}
+
+body {
+    background-color: rgba(240, 248, 255, 0.767);
+}
+

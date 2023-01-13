@@ -2,7 +2,7 @@ import './shoppingCar.css'
 
 const ShoppingCar = () => {
   return (
-    <i className="bi bi-cart">Cart</i>
+    <i className="bi bi-cart"></i>
   )
 }
 

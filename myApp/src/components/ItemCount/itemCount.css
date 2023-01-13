@@ -8,4 +8,19 @@
 .addToCart                                                                                                                                                           {
     margin-top: 5px;
     border-radius: 1rem;
-}                                                                                           
+}           
+
+.btn-card {
+    margin: 10px;
+    border-radius: 1rem;
+    color: green;
+}
+
+.btn-success {
+    margin: 10px;
+}
+
+span {
+    margin: 1rem;
+    color: black;
+}

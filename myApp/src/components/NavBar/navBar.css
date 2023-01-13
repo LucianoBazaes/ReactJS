@@ -1,21 +1,10 @@
-nav {
-    background-color: aquamarine;
-}
-
-nav ul li {
-    display: inline-block;
-    list-style: none;
-   
-}
-
-nav ul li a {
-    text-decoration: none;
-    margin: 20px;
-    color: black;
-}
 
 .seccion {
     margin: 1rem;
     text-decoration: none;
-    color: aliceblue;
+    color: white;
+}
+
+.seccion:hover {
+    color: rgb(14, 207, 14);
 }
