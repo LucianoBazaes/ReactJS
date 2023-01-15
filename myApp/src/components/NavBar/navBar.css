@@ -1,6 +1,10 @@
+.navBar {
+    margin: 0%;
+}
+
 
 .seccion {
-    margin: 1rem;
+    margin: 20px;
     text-decoration: none;
     color: white;
 }

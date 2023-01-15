@@ -1,9 +1,21 @@
 .cardGral {
-    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;                                                                                                                                                 ;
+   display:inline-flex;
+   width: 20%;
+   height: 20%;
+   transition: all 400ms ease;
+
+}
+
+.cardGral:hover {
+ box-shadow: 5px 1px 10px rgba(0,0,0,0.2);
+ transform: translateY(-3%);
 }
 
 .cardItem {
-    background-color: rgba(236, 24, 24, 0.733);
     margin: 2rem;
     display: flex;
 }
@@ -11,8 +23,3 @@
 .cardText {
     font-size: x-large;
 }
-
-body {
-    background-color: rgba(240, 248, 255, 0.767);
-}
-

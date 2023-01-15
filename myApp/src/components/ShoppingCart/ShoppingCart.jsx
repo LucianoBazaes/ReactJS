@@ -1,4 +1,4 @@
-import './shoppingCar.css'
+import './shoppingCart.css'
 
 const ShoppingCar = () => {
   return (

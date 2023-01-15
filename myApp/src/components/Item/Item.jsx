@@ -19,7 +19,7 @@ const Item = ( {contenido} ) => {
          ${contenido.precio}
        </Card.Text>
        <Link to = {`/detalle/${contenido.id}`}>
-       <Button variant="success">Ver en detalle</Button>
+       <Button variant="outline-success">Ver en detalle</Button>
        </Link>
      </Card.Body>
    </Card>
