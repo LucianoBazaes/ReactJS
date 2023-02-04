@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -12,7 +13,7 @@ const Item = ( {contenido} ) => {
     <div className='cardGral'>
       
      <Card className='cardItem' border="success" style={{ width: '18rem' }}>
-    <Card.Img variant="top" src={contenido.image} />
+    <Card.Img variant="top" className='imgCard' src={contenido.image} />
      <Card.Body className='cardBody'>
       <Card.Title>{contenido.nombre}</Card.Title>
         <Card.Text className='cardText'>

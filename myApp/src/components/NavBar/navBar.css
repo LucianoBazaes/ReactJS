@@ -12,3 +12,8 @@
 .seccion:hover {
     color: rgb(14, 207, 14);
 }
+
+.imgLogo {
+    height: 100px;
+    width: 100px;
+}

@@ -3,9 +3,7 @@
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;                                                                                                                                                 ;
-   display:inline-flex;
-   width: 20%;
-   height: 20%;
+   display:inline-block;
    transition: all 400ms ease;
 
 }
@@ -22,4 +20,9 @@
 
 .cardText {
     font-size: x-large;
+}
+
+.imgCard {
+    height: 300px;
+    width: 300px;
 }

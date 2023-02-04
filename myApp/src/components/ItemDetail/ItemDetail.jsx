@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
 
 import ItemCount from '../ItemCount/ItemCount';
+import { useCartContext } from '../../context/CartContext';
 
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+
 import {Link} from 'react-router-dom';
 
 
@@ -12,9 +14,12 @@ import './itemDetail.css'
 const ItemDetail = ({data}) => {
 
   const [irAlCarrito, setIrAlCarrito] = useState(false);
+
+  const {addProduct} = useCartContext();
   
-  const onAdd = () => {
+  const onAdd = (cantidad) => {
    setIrAlCarrito(true);
+   addProduct(data, cantidad);
   }
 
  return (
@@ -22,14 +27,12 @@ const ItemDetail = ({data}) => {
         {<Card border="light" style={{ width: '20rem' }}>
         <Card.Img variant="top" src={data.image} />
         <Card.Body>
-          <Card.Title> <h1>{data.nombre}</h1> </Card.Title>
+          <Card.Title> <h2>{data.nombre}</h2> </Card.Title>
           <Card.Text>
-            <h2>${data.precio}</h2>                    
-            <h3>{data.description}</h3> 
+            <p>${data.precio}</p>                    
+            <p>{data.description}</p> 
             {
-              irAlCarrito 
-              ? <Link className='terminarCompra' to='/shopping-cart'>✔️Terminar Compra</Link>
-              : <ItemCount initial={1} stock={9} onAdd={onAdd} />
+              irAlCarrito ? <Link className='terminarCompra' to='/ShoppingCart'>✔️Terminar Compra</Link> : <ItemCount initial={1} stock={9} onAdd={onAdd} />
             }
              
           </Card.Text>
