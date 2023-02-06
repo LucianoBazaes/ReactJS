@@ -1,0 +1,15 @@
+.imgItem{
+    width: 300px;
+    height: 200px;
+}
+
+.cardItemCart {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenidoCart {
+    font-weight: bolder;  
+}

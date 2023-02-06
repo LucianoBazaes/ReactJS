@@ -1,28 +1,25 @@
-import React from 'react'
-
-import Card from 'react-bootstrap/Card';
-import { useCartContext } from '../../context/CartContext';
+import Card from "react-bootstrap/Card";
+import { useCartContext } from "../../context/CartContext";
+import Button from 'react-bootstrap/Button';
+import "./itemCart.css";
 
 const ItemCart = ({ producto }) => {
-
- const  { eliminarProdCarrito } = useCartContext();
+  const { eliminarProdCarrito } = useCartContext();
 
   return (
-    <Card>
-        <Card.Img variant="top" src={producto.image} />
+    <div className="cardItemCart">
+      <Card  style={{ width: "15rem" }}>
+        <Card.Img variant="top" className="imgItem" src={producto.image} />
         <Card.Body>
-          <Card.Title>{producto.nombre}</Card.Title>
-          <Card.Text>
-            <p> {producto.cantidad} </p>
-            <p>  {producto.precio} </p>
-          </Card.Text>
+          <Card.Title className="contenidoCart">{producto.nombre}</Card.Title>
+            <p className="contenidoCart"> Cantidad: {producto.cantidad} </p>
+            <p className="contenidoCart"> Precio: ${producto.precio} </p>
+          <h5 className="contenidoCart">Subtotal: ${producto.cantidad * producto.precio}</h5>
+          <Button variant="danger" onClick={() => eliminarProdCarrito(producto.id)}>  Eliminar  </Button>
         </Card.Body>
-        <Card.Footer>
-          <p>Subtotal:{producto.cantidad * producto.precio}</p>
-          <button onClick={()=>eliminarProdCarrito(producto.id)}>Eliminar</button>
-        </Card.Footer>
       </Card>
-  )
-}
+    </div>
+  );
+};
 
-export default ItemCart
+export default ItemCart;

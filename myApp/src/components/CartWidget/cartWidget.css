@@ -1,0 +1,20 @@
+.cartWidget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carro {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+}
+
+span{
+    text-decoration: none;
+}
+
+.spanCart {
+    text-decoration: none;
+    color: white;
+}

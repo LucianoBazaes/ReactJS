@@ -4,6 +4,7 @@
 
 
 .seccion {
+    display: block;
     margin: 20px;
     text-decoration: none;
     color: white;
@@ -16,4 +17,9 @@
 .imgLogo {
     height: 100px;
     width: 100px;
+}
+
+.imgCarrito {
+    height: 50px;
+    width: 50px;
 }

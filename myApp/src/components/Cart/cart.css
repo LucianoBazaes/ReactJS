@@ -1,0 +1,30 @@
+.total {
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    
+}
+
+.cartVacio {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 6rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    
+}
+
+.btnVaciar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnComprar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
