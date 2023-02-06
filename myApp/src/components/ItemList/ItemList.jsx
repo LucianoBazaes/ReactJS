@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './itemList.css'
 import Item from '../Item/Item'
 

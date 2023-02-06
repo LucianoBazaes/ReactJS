@@ -1,4 +1,6 @@
+import React from "react";
 import Container from 'react-bootstrap/Container';
+import logo from '../img/celticsss.png'
 import Nav from 'react-bootstrap/Nav';
 import { Link, NavLink } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
@@ -13,7 +15,7 @@ const NavBar = () => {
   return (
      <Navbar className='navBar' collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Link to='/' className='seccion'><img src="/public/celticsss.png" alt="logo" className='imgLogo' /></Link>
+        <Link to='/' className='seccion'><img src={logo} alt="logo" className='imgLogo' /></Link>
         <CartWidget />
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
