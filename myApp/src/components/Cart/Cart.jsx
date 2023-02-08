@@ -26,7 +26,7 @@ const Cart = () => {
     const dataBase = getFirestore();
     const ordenCollection = collection(dataBase,'ordenes');
     addDoc(ordenCollection, orden)
-      .then(respuesta =>
+      .then(respuesta=>
         Swal.fire({
         icon: 'success',
         title: 'Perfecto, su compra ha sido realizada con éxito',
@@ -34,8 +34,10 @@ const Cart = () => {
         footer: respuesta.id,
         showConfirmButton: false,
       })
+      
       )
     }
+    
 
   
   if (cart.length === 0) {
